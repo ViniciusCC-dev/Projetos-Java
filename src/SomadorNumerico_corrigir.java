@@ -9,8 +9,8 @@ public class SomadorNumerico_corrigir {
          String resp = "S";
          int maior = Integer.MIN_VALUE;
          int menor = Integer.MAX_VALUE;
-         while (Boolean.parseBoolean(resp =("S"))) {
-             System.out.println("Digite o "+ "o. valor: ");
+         while (resp.equalsIgnoreCase("S")) {
+             System.out.println("Digite o valor: ");
                 int N = sc.nextInt();
                 if (N > maior){
                     maior = N;
@@ -19,12 +19,13 @@ public class SomadorNumerico_corrigir {
                     menor = N;
                 }
                 s = s + N;
-                System.out.println(resp);
+                System.out.println("Deseja continuar? [S/N]: ");
                 sc.nextLine();
+                resp = sc.nextLine();
          }
         System.out.println("A soma de todos os valores foi: " +s);
         System.out.println("O maior valor digitado foi: " +maior);
         System.out.println("O menor valor digitado foi: " +menor);
-
+        sc.close();
     }
 }

@@ -10,6 +10,10 @@ public class ConteDeXEmX {
         valor = sc.nextInt();
         System.out.println("De quanto em quanto você quer contar? ");
         qnt = sc.nextInt();
+        if (qnt == 0) {
+            System.out.println("ERROR: O valor 0 nao pode fazer essa função");
+            System.exit(0);
+        }
         while(contador <= valor) {
             System.out.println(contador);
             contador = contador + qnt;

@@ -1,3 +1,4 @@
+//No momento nao aprendi a salvar login, creio que precisa de banco de dados. O arquivo sera modificado quando tiver conhecimento da ferramenta MySQL
 import java.util.Scanner;
 public class SistemaLogin {
     public static void main(String[] args) {

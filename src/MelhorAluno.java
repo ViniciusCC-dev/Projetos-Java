@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Locale;
 
-public class MelhorAluno_corrigir {
+public class MelhorAluno {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
@@ -10,6 +10,7 @@ public class MelhorAluno_corrigir {
         System.out.println("------------------------------");
         System.out.print(" Quantos alunos tem na turma? ");
         int total = sc.nextInt();
+        sc.nextLine();
         int cont = 1;
         double maiorNota = 0;
         String melhorAluno = "";
@@ -20,6 +21,7 @@ public class MelhorAluno_corrigir {
             String aluno = sc.nextLine();
             System.out.print("Nota de " + aluno + ": ");
             double nota = sc.nextDouble();
+            sc.nextLine();
             System.out.println("---------------------");
             cont++;
             if (nota > maiorNota) {
