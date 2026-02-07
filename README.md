@@ -1,4 +1,4 @@
-# Meus Estudos de Java 
+# Pequenos exercicios de java
 
 Repositório dedicado ao armazenamento dos meus exercícios e projetos práticos durante o aprendizado de Java.
 
