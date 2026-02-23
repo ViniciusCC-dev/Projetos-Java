@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class SomadorNumerico_corrigir {
+public class SomadorNumerico {
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
          int s = 0;
