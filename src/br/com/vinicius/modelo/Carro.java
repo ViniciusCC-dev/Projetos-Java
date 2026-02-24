@@ -7,6 +7,13 @@ public class Carro {
     public String cor;
     public Pessoa dono;
 
+    public Carro(String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anoDeFabricacao = anoDeFabricacao;
+        this.cor = cor;
+        this.dono = dono;
+    }
     public void exibirDados() {
         System.out.println("---------Dados-Do-Carro---------");
         System.out.println("Marca: " + marca);
@@ -20,4 +27,5 @@ public class Carro {
             System.out.println("Este carro ainda nao possui dono");
         }
     }
+
 }
