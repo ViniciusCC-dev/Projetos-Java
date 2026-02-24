@@ -1,4 +1,4 @@
-//estutura de repetição while
+package br.com.vinicius.logica;//estutura de repetição while
 
 import java.util.Scanner;
 

@@ -1,3 +1,5 @@
+package br.com.vinicius.logica;
+
 import java.util.Scanner;
 import java.util.Locale;
 public class CalculadoraIMC {

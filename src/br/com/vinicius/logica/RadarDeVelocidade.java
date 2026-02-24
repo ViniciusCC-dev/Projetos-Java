@@ -1,3 +1,5 @@
+package br.com.vinicius.logica;
+
 public class RadarDeVelocidade {
     static void main() {
         double  veloDoCarro = 88;

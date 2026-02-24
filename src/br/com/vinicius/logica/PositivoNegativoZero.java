@@ -1,3 +1,5 @@
+package br.com.vinicius.logica;
+
 import java.util.Scanner;
 
 public class PositivoNegativoZero {
