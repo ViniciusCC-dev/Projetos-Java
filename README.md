@@ -1,6 +1,6 @@
 # Pequenos exercicios de java
 
-Repositório central de estudos em Java: implementações de lógica, estruturas de dados e os pilares da Orientação a Objetos. Foco em código limpo e fundamentos da linguagem.
+Este repositório armazena meu progresso e evolução técnica na linguagem Java. O foco aqui é construir uma base sólida antes de avançar para frameworks como Spring Boot.
 
 ##  Projetos Inclusos
 
