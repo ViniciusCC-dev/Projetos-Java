@@ -2,6 +2,10 @@
 
 Este repositório armazena meu progresso e evolução técnica na linguagem Java. O foco aqui é construir uma base sólida antes de avançar para frameworks como Spring Boot.
 
+## O que estou praticando:
+* **Lógica de Programação:** Estruturas de repetição, condicionais e manipulação de arrays.
+* **Programação Orientada a Objetos (POO):** Abstração, Encapsulamento, Herança e Polimorfismo.
+
 ##  Projetos Inclusos
 
 * **Calculadora IMC:** Cálculo de índice de massa corporal.
