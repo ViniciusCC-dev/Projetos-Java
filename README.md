@@ -1,6 +1,6 @@
 # Pequenos exercicios de java
 
-Repositório dedicado ao armazenamento dos meus exercícios e projetos práticos durante o aprendizado de Java.
+Repositório central de estudos em Java: implementações de lógica, estruturas de dados e os pilares da Orientação a Objetos. Foco em código limpo e fundamentos da linguagem.
 
 ##  Projetos Inclusos
 
