@@ -14,6 +14,14 @@ public class Carro {
         this.cor = cor;
         this.dono = dono;
     }
+    public Carro(String marca, String modelo, int anoDeFabricacao, String cor) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anoDeFabricacao = anoDeFabricacao;
+        this.cor = cor;
+    }
+
+
     public void exibirDados() {
         System.out.println("---------Dados-Do-Carro---------");
         System.out.println("Marca: " + marca);
