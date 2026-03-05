@@ -1,24 +1,15 @@
     package br.com.vinicius.modelo;
 
-    public class Carro {
-    private String marca;
-    private String modelo;
-    private int anoDeFabricacao;
-    private String cor;
-    private Pessoa dono;
+    public class Carro extends Veiculo{
+        private int numeroDePortas;
 
     public Carro(String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono) {
-        this.setMarca(marca);
-        this.setModelo(modelo);
-        this.setAnoDeFabricacao(anoDeFabricacao);
-        this.setCor(cor);
-        this.setDono(dono);
+        super(marca, modelo, anoDeFabricacao, cor, dono);
+        this.numeroDePortas = numeroDePortas;
     }
     public Carro(String marca, String modelo, int anoDeFabricacao, String cor) {
-        this.setMarca(marca);
-        this.setModelo(modelo);
-        this.setAnoDeFabricacao(anoDeFabricacao);
-        this.setCor(cor);
+        super(marca, modelo, anoDeFabricacao, cor);
+        this.numeroDePortas = numeroDePortas;
     }
 
 
@@ -78,5 +69,13 @@
 
         public void setDono(Pessoa dono) {
             this.dono = dono;
+        }
+
+        public int getNumeroDePortas() {
+            return numeroDePortas;
+        }
+
+        public void setNumeroDePortas(int numeroDePortas) {
+            this.numeroDePortas = numeroDePortas;
         }
     }
