@@ -3,72 +3,19 @@
     public class Carro extends Veiculo{
         private int numeroDePortas;
 
-    public Carro(String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono) {
+    public Carro(String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono, int numeroDePortas) {
         super(marca, modelo, anoDeFabricacao, cor, dono);
         this.numeroDePortas = numeroDePortas;
     }
-    public Carro(String marca, String modelo, int anoDeFabricacao, String cor) {
+    public Carro(String marca, String modelo, int anoDeFabricacao, String cor, int i) {
         super(marca, modelo, anoDeFabricacao, cor);
         this.numeroDePortas = numeroDePortas;
     }
 
-
-    public void exibirDados() {
-        System.out.println("---------Dados-Do-Carro---------");
-        System.out.println("Marca: " + getMarca());
-        System.out.println("Modelo: " + getModelo());
-        System.out.println("Ano de Fabricação: " + getAnoDeFabricacao());
-        System.out.println("Cor: " + getCor());
-        if (getDono() != null) {
-            System.out.println("O dono do carro é: ");
-            getDono().exibirInfo();
-        }else {
-            System.out.println("Este carro ainda nao possui dono");
-        }
-    }
-
-        public String getMarca() {
-            return marca;
-        }
-
-        public void setMarca(String marca) {
-            this.marca = marca;
-        }
-
-        public String getModelo() {
-            return modelo;
-        }
-
-        public void setModelo(String modelo) {
-            this.modelo = modelo;
-        }
-
-        public int getAnoDeFabricacao() {
-            return anoDeFabricacao;
-        }
-
-        public void setAnoDeFabricacao(int anoDeFabricacao) {
-            if (anoDeFabricacao > 1886 && anoDeFabricacao < 2026) {
-                this.anoDeFabricacao = anoDeFabricacao;
-            }else {
-                System.out.println("ERRO: Data do veiculo invalida");
-            }
-        }
-
-        public String getCor() {
-            return cor;
-        }
-
-        public void setCor(String cor) {
-            this.cor = cor;
-        }
-
-        public Pessoa getDono() {
-            return dono;
-        }
-
-        public void setDono(Pessoa dono) {
-            this.dono = dono;
+        public void exibirDados() {
+            super.exibirDados(); // Faz o que o veículo já faz (Marca, Modelo...)
+            System.out.println("Numero de portas: " + this.numeroDePortas);
+            System.out.println("--------------------------------");
         }
 
         public int getNumeroDePortas() {
@@ -76,6 +23,11 @@
         }
 
         public void setNumeroDePortas(int numeroDePortas) {
-            this.numeroDePortas = numeroDePortas;
+            if (numeroDePortas > 0 &&  numeroDePortas <= 8) {
+                this.numeroDePortas = numeroDePortas;
+            }else {
+                System.out.println("O numero de portas do seu carro é invalido");
+                this.numeroDePortas = 0;
+            }
         }
     }
