@@ -33,7 +33,7 @@ public abstract class Veiculo {
         System.out.println("Marca: " + getMarca());
         System.out.println("Modelo: " + getModelo());
         System.out.println("Ano de Fabricação: " + getAnoDeFabricacao());
-        System.out.println("Cor: " + getCor());
+        System.out.println("Cor do Veiculo: " + getCor());
         if (getDono() != null) {
             System.out.println("O dono d" + getArtigo() + " " + this.getClass().getSimpleName() + " é: ");
             getDono().exibirInfo();
