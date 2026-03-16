@@ -22,7 +22,7 @@
         }
 
         public void setNome(String nome) {
-            if (nome != null && !nome.isEmpty() && nome.length() >= 3) {
+            if (nome != null && !nome.isEmpty() && nome.length() > 3) {
                 this.nome = nome;
             } else {
                 System.out.println("ERRO: O nome fornecido é inválido e não foi salvo.");

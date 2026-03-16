@@ -3,12 +3,12 @@ package br.com.vinicius.modelo;
 public class Moto extends Veiculo{
     private int cilindradas;
 
-    public Moto (String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono, int cilindradas){
-        super(marca, modelo, anoDeFabricacao, cor, dono);
+    public Moto (String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono, int cilindradas){
+        super(marca, modelo, anoDeFabricacao,placa, cor, dono);
         this.cilindradas = cilindradas;
     }
-    public Moto (String marca, String modelo, int anoDeFabricacao, String cor, int cilindradas){
-        super(marca, modelo, anoDeFabricacao, cor);
+    public Moto (String marca, String modelo, int anoDeFabricacao,String placa, String cor, int cilindradas){
+        super(marca, modelo, anoDeFabricacao,placa, cor);
         this.cilindradas = cilindradas;
     }
 

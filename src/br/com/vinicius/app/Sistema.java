@@ -27,21 +27,21 @@
             Pessoa p10 = new Pessoa("Juan", 32,1993);
 
 
-            Caminhao cam1 = new Caminhao("Volvo", "FH 540", 1959, "Branco", p4,50941);
-            Caminhao cam2 = new Caminhao("Mercedes-Benz", "Actros 2651", 1956, "Azul", p7, 6700);
-            Caminhao cam3 = new Caminhao("Scania", "R450", 1981, "Prata", p8, 70000);
-            Caminhao cam4 = new Caminhao("Mercedes-Benz", "710", 2010, "Azul", 6700);
+            Caminhao cam1 = new Caminhao("Volvo", "FH 540", 1959, "kjh-2241", "Branco", p4,50941);
+            Caminhao cam2 = new Caminhao("Mercedes-Benz", "Actros 2651", 1956, "dfh-2652", "Azul", p7, 6700);
+            Caminhao cam3 = new Caminhao("Scania", "R450", 1981, "iyt-5078", "Prata", p8, 70000);
+            Caminhao cam4 = new Caminhao("Mercedes-Benz", "710", 2010, "hkj-4595", "Azul", 6700);
 
 
-            Moto mot1 = new Moto("Honda", "Hornet", 2019, "Branco", p1, 100);
-            Moto mot2 = new Moto("Honda ", "CG 160", 2025, "Preto", p5,160);
-            Moto mot3 = new Moto("Yamaha", "Lander 250",2006  , "Verde", p10,250);
-            Moto mot4 = new Moto("Suzuki", "GSX-S 1000", 2025, "Azul", 1000);
+            Moto mot1 = new Moto("Honda", "Hornet", 2019, "vxc-1536","Branco", p1, 100);
+            Moto mot2 = new Moto("Honda ", "CG 160", 2025, "iou-6972", "Preto", p5,160);
+            Moto mot3 = new Moto("Yamaha", "Lander 250",2006 , "ads-2345", "Verde", p10,250);
+            Moto mot4 = new Moto("Suzuki", "GSX-S 1000", 2025, "abc-1234", "Azul", 1000);
 
-            Carro c1 = new Carro ("BMW", "C8", 2017, "Azul", p2,2);
-            Carro c2 = new Carro ("Ford", "ká", 2009,"Preto", p6,4);
-            Carro c3 = new Carro ("Pegeout", "208", 2014, "Prata", p9, 4);
-            Carro c4 = new Carro ("Chevrolet", "Camaro", 2005, "Amarelo", p3, 2);
+            Carro c1 = new Carro ("BMW", "C8", 2017, "zxc-3456", "Azul", p2,2);
+            Carro c2 = new Carro ("Ford", "ká", 2009, "mvb-0789","Preto", p6,4);
+            Carro c3 = new Carro ("Pegeout", "208", 2014, "ity-1325", "Prata", p9, 4);
+            Carro c4 = new Carro ("Chevrolet", "Camaro", 2005, "vad-3890", "Amarelo", 2);
 
             estoque[0] = c1;
             estoque[1] = c2;

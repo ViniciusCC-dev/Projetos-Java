@@ -4,21 +4,25 @@ public abstract class Veiculo {
     private String marca;
     private String modelo;
     private int anoDeFabricacao;
+    private String placa;
     private String cor;
     private Pessoa dono;
 
-    public Veiculo(String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono) {
+
+    public Veiculo(String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono) {
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setAnoDeFabricacao(anoDeFabricacao);
+        this.setPlaca(placa);
         this.setCor(cor);
         this.setDono(dono);
     }
 
-    public Veiculo(String marca, String modelo, int anoDeFabricacao, String cor) {
+    public Veiculo(String marca, String modelo, int anoDeFabricacao,String placa, String cor) {
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setAnoDeFabricacao(anoDeFabricacao);
+        this.setPlaca(placa);
         this.setCor(cor);
     }
 
@@ -33,6 +37,11 @@ public abstract class Veiculo {
         System.out.println("Marca: " + getMarca());
         System.out.println("Modelo: " + getModelo());
         System.out.println("Ano de Fabricação: " + getAnoDeFabricacao());
+        if (this.placa != null) {
+            System.out.println("Placa: " + this.placa);
+        }else {
+            System.out.println("ERRO: Placa não cadastrada ou inválida!");
+        }
         System.out.println("Cor do Veiculo: " + getCor());
         if (getDono() != null) {
             System.out.println("O dono d" + getArtigo() + " " + this.getClass().getSimpleName() + " é: ");
@@ -84,5 +93,20 @@ public abstract class Veiculo {
             System.out.println("ERRO: nao é possível atribuir um dono inexistente");
         }
         this.dono = dono;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        if (placa == null) {
+            System.out.println("ERRO: nao é possível atribuir um valor de placa invalido");
+        } else if (placa.length() != 8) {
+            System.out.println("ERRO: nao é possível atribuir um valor de placa invalido");
+        }else {
+            this.placa = placa.toUpperCase();
+        }
+
     }
 }

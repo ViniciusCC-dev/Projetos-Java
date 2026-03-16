@@ -3,12 +3,12 @@ package br.com.vinicius.modelo;
 public class Caminhao extends Veiculo{
     private double capacidadeDeCarga;
 
-    public Caminhao (String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono, int capacidadeDeCarga){
-        super(marca, modelo, anoDeFabricacao, cor, dono);
+    public Caminhao (String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono, int capacidadeDeCarga){
+        super(marca, modelo, anoDeFabricacao,placa, cor, dono);
         this.capacidadeDeCarga = capacidadeDeCarga;
     }
-    public Caminhao (String marca, String modelo, int anoDeFabricacao, String cor, int capacidadeDeCarga){
-        super(marca, modelo, anoDeFabricacao, cor);
+    public Caminhao (String marca, String modelo, int anoDeFabricacao,String placa, String cor, int capacidadeDeCarga){
+        super(marca, modelo, anoDeFabricacao, placa, cor);
         this.capacidadeDeCarga = capacidadeDeCarga;
     }
 

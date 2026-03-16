@@ -3,12 +3,12 @@
     public class Carro extends Veiculo{
         private int numeroDePortas;
 
-    public Carro(String marca, String modelo, int anoDeFabricacao, String cor, Pessoa dono, int numeroDePortas) {
-        super(marca, modelo, anoDeFabricacao, cor, dono);
+    public Carro(String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono, int numeroDePortas) {
+        super(marca, modelo, anoDeFabricacao,placa, cor, dono);
         this.numeroDePortas = numeroDePortas;
     }
-    public Carro(String marca, String modelo, int anoDeFabricacao, String cor, int i) {
-        super(marca, modelo, anoDeFabricacao, cor);
+    public Carro(String marca, String modelo, int anoDeFabricacao,String placa, String cor, int numeroDePortas) {
+        super(marca, modelo, anoDeFabricacao,placa, cor);
         this.numeroDePortas = numeroDePortas;
     }
 
