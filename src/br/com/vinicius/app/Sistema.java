@@ -15,7 +15,6 @@
             Veiculo veiculoVovo = null;
 
             Veiculo[] estoque = new Veiculo[12];
-
             Pessoa p1 = new Pessoa("Daniel", 25,2001);
             Pessoa p2 = new Pessoa("Vinicius", 18, 2007);
             Pessoa p3 = new Pessoa("Giovanna", 18,2007);
@@ -27,9 +26,10 @@
             Pessoa p9 = new Pessoa("Maria", 57,1969);
             Pessoa p10 = new Pessoa("Juan", 32,1993);
 
-            Caminhao cam1 = new Caminhao("Volvo", "FH 540", 1959, "Branco", p4,500941);
-            Caminhao cam2 = new Caminhao("Mercedes-Benz", "Actros 2651", 1956, "Azul", p7, 67000);
-            Caminhao cam3 = new Caminhao("Scania", "R450", 1981, "Prata", p8, 7000000);
+
+            Caminhao cam1 = new Caminhao("Volvo", "FH 540", 1959, "Branco", p4,50941);
+            Caminhao cam2 = new Caminhao("Mercedes-Benz", "Actros 2651", 1956, "Azul", p7, 6700);
+            Caminhao cam3 = new Caminhao("Scania", "R450", 1981, "Prata", p8, 70000);
             Caminhao cam4 = new Caminhao("Mercedes-Benz", "710", 2010, "Azul", 6700);
 
 
@@ -69,7 +69,7 @@
                 }
             }
             if (veiculoVovo != null) {
-                System.out.println("O carro mais antigo da frota é o [" + veiculoVovo.getMarca() + "] , [" + veiculoVovo.getModelo() + "] do ano: " + veiculoVovo.getAnoDeFabricacao());
+                System.out.println("O veiculo mais antigo da frota é o [" + veiculoVovo.getMarca() + "] , [" + veiculoVovo.getModelo() + "] do ano: " + veiculoVovo.getAnoDeFabricacao());
             }
 
             listaDeVeiculo.add(c1);
@@ -103,9 +103,10 @@
 
             for (Veiculo v: listaDeVeiculo){
                 v.exibirDados();
+                System.out.printf("Valor do seguro: R$ %.2f%n" , v.calcularSeguro());
             }
 
             System.out.println("-----------------------------");
-            System.out.println("Total de Carros no sistema: " + listaDeVeiculo.size());
+            System.out.println("Total de Veículos no sistema: " + listaDeVeiculo.size());
         }
     }

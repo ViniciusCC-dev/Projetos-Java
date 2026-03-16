@@ -12,6 +12,11 @@ public class Caminhao extends Veiculo{
         this.capacidadeDeCarga = capacidadeDeCarga;
     }
 
+    public double calcularSeguro(){
+        return this.getCapacidadeDeCarga() * 0.23;
+    }
+
+
     public void exibirDados() {
         super.exibirDados();
         System.out.println("Capacidade de Carga: " + this.capacidadeDeCarga + "kg");

@@ -1,6 +1,6 @@
 package br.com.vinicius.modelo;
 
-public class Veiculo {
+public abstract class Veiculo {
     private String marca;
     private String modelo;
     private int anoDeFabricacao;
@@ -14,12 +14,19 @@ public class Veiculo {
         this.setCor(cor);
         this.setDono(dono);
     }
-    public Veiculo(String marca, String modelo, int anoDeFabricacao, String cor){
+
+    public Veiculo(String marca, String modelo, int anoDeFabricacao, String cor) {
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setAnoDeFabricacao(anoDeFabricacao);
         this.setCor(cor);
     }
+
+    public abstract double calcularSeguro();
+
+    public String getArtigo(){
+        return "o";
+    };
 
     public void exibirDados() {
         System.out.println("---------Dados-Do-Veiculo---------");
@@ -28,9 +35,9 @@ public class Veiculo {
         System.out.println("Ano de Fabricação: " + getAnoDeFabricacao());
         System.out.println("Cor: " + getCor());
         if (getDono() != null) {
-            System.out.println("O dono do carro é: ");
+            System.out.println("O dono d" + getArtigo() + " " + this.getClass().getSimpleName() + " é: ");
             getDono().exibirInfo();
-        }else {
+        } else {
             System.out.println("Este carro ainda nao possui dono");
         }
     }
@@ -72,6 +79,10 @@ public class Veiculo {
     }
 
     public void setDono(Pessoa dono) {
+
+        if(dono == null){
+            System.out.println("ERRO: nao é possível atribuir um dono inexistente");
+        }
         this.dono = dono;
     }
 }

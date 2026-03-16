@@ -12,6 +12,14 @@ public class Moto extends Veiculo{
         this.cilindradas = cilindradas;
     }
 
+    public double calcularSeguro(){
+        return (this.cilindradas * 1.005) + (this.getAnoDeFabricacao() * 1.1);
+    }
+
+    public String getArtigo() {
+        return "a"; // Especialização para feminino
+    }
+
     public void exibirDados() {
         super.exibirDados();
         System.out.println("Cilindradas: " + this.cilindradas);

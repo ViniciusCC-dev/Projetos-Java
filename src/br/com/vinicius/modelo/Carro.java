@@ -12,6 +12,12 @@
         this.numeroDePortas = numeroDePortas;
     }
 
+        public double calcularSeguro(){
+            return this.getAnoDeFabricacao() * 1.5;
+        }
+
+
+
         public void exibirDados() {
             super.exibirDados(); // Faz o que o veículo já faz (Marca, Modelo...)
             System.out.println("Numero de portas: " + this.numeroDePortas);
