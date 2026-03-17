@@ -1,19 +1,23 @@
 package br.com.vinicius.modelo;
 
-public class Moto extends Veiculo{
+public class Moto extends Veiculo implements Tributavel {
     private int cilindradas;
 
-    public Moto (String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono, int cilindradas){
-        super(marca, modelo, anoDeFabricacao,placa, cor, dono);
+    public Moto (String marca, String modelo, int anoDeFabricacao,String placa, String cor, double valor, Pessoa dono, int cilindradas){
+        super(marca, modelo, anoDeFabricacao,placa, cor, valor, dono);
         this.cilindradas = cilindradas;
     }
-    public Moto (String marca, String modelo, int anoDeFabricacao,String placa, String cor, int cilindradas){
-        super(marca, modelo, anoDeFabricacao,placa, cor);
+    public Moto (String marca, String modelo, int anoDeFabricacao,String placa, String cor, double valor, int cilindradas){
+        super(marca, modelo, anoDeFabricacao,placa, cor, valor);
         this.cilindradas = cilindradas;
     }
 
     public double calcularSeguro(){
         return (this.cilindradas * 1.005) + (this.getAnoDeFabricacao() * 1.1);
+    }
+
+    public double calcularImposto(){
+        return getValor();
     }
 
     public String getArtigo() {

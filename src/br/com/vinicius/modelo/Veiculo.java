@@ -6,24 +6,27 @@ public abstract class Veiculo {
     private int anoDeFabricacao;
     private String placa;
     private String cor;
+    private double valor;
     private Pessoa dono;
 
 
-    public Veiculo(String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono) {
+    public Veiculo(String marca, String modelo, int anoDeFabricacao,String placa, String cor,double valor, Pessoa dono) {
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setAnoDeFabricacao(anoDeFabricacao);
         this.setPlaca(placa);
         this.setCor(cor);
+        this.setValor(valor);
         this.setDono(dono);
     }
 
-    public Veiculo(String marca, String modelo, int anoDeFabricacao,String placa, String cor) {
+    public Veiculo(String marca, String modelo, int anoDeFabricacao,String placa, String cor, double valor) {
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setAnoDeFabricacao(anoDeFabricacao);
         this.setPlaca(placa);
         this.setCor(cor);
+        this.setValor(valor);
     }
 
     public abstract double calcularSeguro();
@@ -43,6 +46,7 @@ public abstract class Veiculo {
             System.out.println("ERRO: Placa não cadastrada ou inválida!");
         }
         System.out.println("Cor do Veiculo: " + getCor());
+        System.out.println("Valor do Veiculo: " + getValor());
         if (getDono() != null) {
             System.out.println("O dono d" + getArtigo() + " " + this.getClass().getSimpleName() + " é: ");
             getDono().exibirInfo();
@@ -108,5 +112,13 @@ public abstract class Veiculo {
             this.placa = placa.toUpperCase();
         }
 
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 }

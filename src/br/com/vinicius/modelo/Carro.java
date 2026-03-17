@@ -1,14 +1,14 @@
     package br.com.vinicius.modelo;
 
-    public class Carro extends Veiculo{
+    public class Carro extends Veiculo implements Tributavel {
         private int numeroDePortas;
 
-    public Carro(String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono, int numeroDePortas) {
-        super(marca, modelo, anoDeFabricacao,placa, cor, dono);
+    public Carro(String marca, String modelo, int anoDeFabricacao,String placa, String cor, double valor, Pessoa dono, int numeroDePortas) {
+        super(marca, modelo, anoDeFabricacao,placa, cor, valor, dono);
         this.numeroDePortas = numeroDePortas;
     }
-    public Carro(String marca, String modelo, int anoDeFabricacao,String placa, String cor, int numeroDePortas) {
-        super(marca, modelo, anoDeFabricacao,placa, cor);
+    public Carro(String marca, String modelo, int anoDeFabricacao,String placa, String cor, double valor, int numeroDePortas) {
+        super(marca, modelo, anoDeFabricacao,placa, cor, valor);
         this.numeroDePortas = numeroDePortas;
     }
 
@@ -16,7 +16,9 @@
             return this.getAnoDeFabricacao() * 1.5;
         }
 
-
+        public double calcularImposto(){
+            return getValor();
+        }
 
         public void exibirDados() {
             super.exibirDados(); // Faz o que o veículo já faz (Marca, Modelo...)

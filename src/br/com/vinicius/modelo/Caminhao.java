@@ -1,14 +1,16 @@
 package br.com.vinicius.modelo;
 
-public class Caminhao extends Veiculo{
+import java.io.Serializable;
+
+public class Caminhao extends Veiculo implements Tributavel {
     private double capacidadeDeCarga;
 
-    public Caminhao (String marca, String modelo, int anoDeFabricacao,String placa, String cor, Pessoa dono, int capacidadeDeCarga){
-        super(marca, modelo, anoDeFabricacao,placa, cor, dono);
+    public Caminhao (String marca, String modelo, int anoDeFabricacao,String placa, String cor,double valor, Pessoa dono, int capacidadeDeCarga){
+        super(marca, modelo, anoDeFabricacao,placa, cor, valor, dono);
         this.capacidadeDeCarga = capacidadeDeCarga;
     }
-    public Caminhao (String marca, String modelo, int anoDeFabricacao,String placa, String cor, int capacidadeDeCarga){
-        super(marca, modelo, anoDeFabricacao, placa, cor);
+    public Caminhao (String marca, String modelo, int anoDeFabricacao,String placa, String cor, double valor, int capacidadeDeCarga){
+        super(marca, modelo, anoDeFabricacao, placa, cor, valor);
         this.capacidadeDeCarga = capacidadeDeCarga;
     }
 
@@ -16,6 +18,9 @@ public class Caminhao extends Veiculo{
         return this.getCapacidadeDeCarga() * 0.23;
     }
 
+    public double calcularImposto(){
+        return getValor();
+    }
 
     public void exibirDados() {
         super.exibirDados();
