@@ -109,6 +109,8 @@
             System.out.println("-----------------------------");
             System.out.println("Total de Veículos no sistema: " + listaDeVeiculo.size());
             System.out.println("-----------------------------");
+            System.out.println("");
+            System.out.println("-----------------------------");
 
             GeradorDeImposto gerador = new  GeradorDeImposto();
 
@@ -127,7 +129,6 @@
             gerador.registrar(mot3);
             gerador.registrar(mot4);
 
-            System.out.println("-----------------------------");
             System.out.printf("Total acumulado: R$%.2f%n" , gerador.getTotalDosImpostos());
 
         }

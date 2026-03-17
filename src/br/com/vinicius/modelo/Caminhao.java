@@ -19,7 +19,11 @@ public class Caminhao extends Veiculo implements Tributavel {
     }
 
     public double calcularImposto(){
-        return getValor();
+        return this.getValor() *  0.03;
+    }
+
+    public String getDescricao(){
+        return "Veiculo: " + this.getModelo() + "(Placa: " + this.getPlaca() + ")";
     }
 
     public void exibirDados() {

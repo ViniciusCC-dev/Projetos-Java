@@ -17,7 +17,11 @@ public class Moto extends Veiculo implements Tributavel {
     }
 
     public double calcularImposto(){
-        return getValor();
+        return this.getValor() * 0.02;
+    }
+
+    public String getDescricao(){
+        return "Veiculo: " + this.getModelo() + "(Placa: " + this.getPlaca() + ")";
     }
 
     public String getArtigo() {

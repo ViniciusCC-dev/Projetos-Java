@@ -1,11 +1,15 @@
 package br.com.vinicius.modelo;
 
 public class GeradorDeImposto {
+
     private double totalDosImpostos;
+
     public void registrar(Tributavel t){
-        double valor = t.calcularImposto();
-        this.setTotalDosImpostos(this.getTotalDosImpostos() + valor);
-        System.out.printf("Imposto registrado! Valor: R$%.2f%n" , valor);
+        System.out.println("Processando: " + t.getDescricao());
+        double imposto = t.calcularImposto();
+        this.totalDosImpostos += imposto;
+        System.out.printf("Imposto devido: R$%.2f%n" , imposto);
+        System.out.println("-----------------------------");
     }
 
     public double getTotalDosImpostos() {
